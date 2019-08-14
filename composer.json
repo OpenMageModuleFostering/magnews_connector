@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/MagNews_Connector",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Relevant email marketing, thanks to automated  targeted lifecycle promotions, based on chart recovery, up selling, cross selling,  whishlists",
+    "authors": [
+    {
+        "name": "MagNews Development Team",
+        "email": "info@magnews.it"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

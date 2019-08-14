@@ -1,0 +1,173 @@
+
+<config>    
+    <api>
+        <resources>
+            <magnews_version translate="title" module="magnews">
+                <title>Plugin version info</title>                
+                <model>Diennea_MagNews_Model_Version_Api</model>
+                <acl>magnews</acl>
+                <methods>
+                    <getpluginversion translate="title" module="magnews">
+                        <title>Get plugin version</title>      
+                        <method>getpluginversion</method>
+                        <acl>magnews/useplugin</acl>
+                    </getpluginversion>                    
+                </methods>                
+            </magnews_version>
+            <magnews_abandonedcart translate="title" module="magnews">
+                <title>Abandoned Cart</title>                
+                <model>Diennea_MagNews_Model_Abandonedcart_Api</model>
+                <acl>magnews</acl>
+                <methods>
+                    <getlastbycustomer translate="title" module="magnews">
+                        <title>Retrieve last abandoned cart for a customer</title>      
+                        <method>getlastbycustomer</method>
+                        <acl>magnews/useplugin</acl>
+                    </getlastbycustomer>                    
+                </methods>                
+            </magnews_abandonedcart>
+            <magnews_newslettersubscription translate="title" module="magnews">
+                <title>Newsletter subscription</title>                
+                <model>Diennea_MagNews_Model_Newslettersubscription_Api</model>
+                <acl>magnews</acl>
+                <methods>
+                    <getallnoncustomers translate="title" module="magnews">
+                        <title>Retrieve the whole list of Newsletter subscriptions for non customers</title>      
+                        <method>getallnoncustomers</method>
+                        <acl>magnews/useplugin</acl>
+                    </getallnoncustomers>                    
+                    <getnoncustomerspage translate="title" module="magnews">
+                        <title>Retrieve a page of Newsletter subscriptions for non customers</title>      
+                        <method>getnoncustomerspage</method>
+                        <acl>magnews/useplugin</acl>
+                    </getnoncustomerspage>                    
+                    <countnoncustomers translate="title" module="magnews">
+                        <title>Count Newsletter subscriptions for non customers</title>      
+                        <method>countnoncustomers</method>
+                        <acl>magnews/useplugin</acl>
+                    </countnoncustomers>                                            
+                    <customersubscription translate="title" module="magnews">
+                        <title>Retrive Newsletter subscriptions for a customer</title>      
+                        <method>customersubscription</method>
+                        <acl>magnews/useplugin</acl>
+                    </customersubscription>
+                    <subscribe translate="title" module="magnews">
+                        <title>Subscribe an email address</title>      
+                        <method>subscribe</method>
+                        <acl>magnews/useplugin</acl>
+                    </subscribe>
+                    <unsubscribe translate="title" module="magnews">
+                        <title>Unsubscribe an email address</title>      
+                        <method>unsubscribe</method>
+                        <acl>magnews/useplugin</acl>
+                    </unsubscribe>
+                    <getbyemail translate="title" module="magnews">
+                        <title>Gets a subscription using email as key</title>      
+                        <method>getbyemail</method>
+                        <acl>magnews/useplugin</acl>
+                    </getbyemail>
+                </methods>                   
+            </magnews_newslettersubscription>
+            <magnews_customerlogin translate="title" module="magnews">
+                <title>Customer Login</title>                
+                <model>Diennea_MagNews_Model_Customerlogin_Api</model>
+                <acl>magnews</acl>
+                <methods>
+                    <lastloginforcustomer translate="title" module="magnews">
+                        <title>Retrive last login for customer</title>      
+                        <method>lastloginforcustomer</method>
+                        <acl>magnews/useplugin</acl>
+                    </lastloginforcustomer>                    
+                </methods>               
+            </magnews_customerlogin>
+            <magnews_customersbatch translate="title" module="magnews">
+                <title>Customer Batch find utils</title>                
+                <model>Diennea_MagNews_Model_Customersbatch_Api</model>
+                <acl>magnews</acl>
+                <methods>
+                    <getcustomersidpage translate="title" module="magnews">
+                        <title>Retrieve customers list</title>      
+                        <method>getcustomersidpage</method>
+                        <acl>magnews/useplugin</acl>
+                    </getcustomersidpage>
+                    <countcustomers translate="title" module="magnews">
+                        <title>Retrieve customers count</title>      
+                        <method>countcustomers</method>
+                        <acl>magnews/useplugin</acl>
+                    </countcustomers>
+                    <getdetailedinfo translate="title" module="magnews">
+                        <title>Retrieve detailed info about a customer (main fields, last order, last address...)</title>      
+                        <method>getdetailedinfo</method>
+                        <acl>magnews/useplugin</acl>
+                    </getdetailedinfo>
+                </methods>
+            </magnews_customersbatch>
+            <magnews_global_queries translate="title" module="magnews">
+                <title>MagNews Global queries</title>
+                <model>Diennea_MagNews_Model_Globalqueries_Api</model>
+                <acl>magnews</acl>
+                <methods>
+                    <getbestsellerproduct translate="title" module="magnews">
+                        <title>Retrieve Best seller product</title>
+                        <method>getbestsellerproduct</method>
+                        <acl>magnews/useplugin</acl>
+                    </getbestsellerproduct>
+                    <getmostprofitableproduct translate="title" module="magnews">
+                        <title>Retrieve Most profitable product</title>
+                        <method>getmostprofitableproduct</method>
+                        <acl>magnews/useplugin</acl>
+                    </getmostprofitableproduct>
+                    <getmostviewedproduct translate="title" module="magnews">
+                        <title>Retrieve most viewed product</title>
+                        <method>getmostviewedproduct</method>
+                        <acl>magnews/useplugin</acl>
+                    </getmostviewedproduct>
+                    <getmostwishedproduct translate="title" module="magnews">
+                        <title>Retrieve most wished product</title>
+                        <method>getmostwishedproduct</method>
+                        <acl>magnews/useplugin</acl>
+                    </getmostwishedproduct>
+                    <getmostabandonedproduct translate="title" module="magnews">
+                        <title>Retrieve most abandoned product</title>
+                        <method>getmostabandonedproduct</method>
+                        <acl>magnews/useplugin</acl>
+                    </getmostabandonedproduct>
+                </methods>
+            </magnews_global_queries>
+            <magnews_customer_queries translate="title" module="magnews">
+                <title>MagNews Customer Queries</title>
+                <model>Diennea_MagNews_Model_Customerqueries_Api</model>
+                <acl>magnews</acl>
+                <methods>
+                    <getmostwishedproduct translate="title" module="magnews">
+                        <title>Most wisehd product</title>
+                        <method>getmostwishedproduct</method>
+                        <acl>magnews/useplugin</acl>
+                    </getmostwishedproduct>
+                </methods>
+            </magnews_customer_queries>
+            <magnews_catalog translate="title" module="magnews">
+                <title>Catalog</title>                
+                <model>Diennea_MagNews_Model_Catalog_Api</model>
+                <acl>magnews</acl>
+                <methods>
+                    <getmaxproductid translate="title" module="magnews">
+                        <title>Retrieve current min and max database ids of catalog products</title>      
+                        <method>getminandmaxproductid</method>
+                        <acl>magnews/useplugin</acl>
+                    </getmaxproductid>                    
+                </methods>                
+            </magnews_catalog>
+        </resources>
+        <acl>
+            <resources>
+                <magnews translate="title" module="magnews">
+                    <title>MagNews</title>                    
+                    <useplugin translate="title" module="magnews">
+                        <title>Use MagNews Plugin API methods</title>
+                    </useplugin>
+                </magnews>                
+            </resources>
+        </acl>
+    </api>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Diennea_MagNews>
+            <active>true</active>
+            <codePool>local</codePool>           
+        </Diennea_MagNews>
+    </modules>
+</config>
