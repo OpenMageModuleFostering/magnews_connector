@@ -2,22 +2,34 @@
 
 class Diennea_MagNews_Model_Customersbatch_Api extends Mage_Api_Model_Resource_Abstract {
 
-    public function getcustomersidpage($pageNum, $pageSize) {
+    public function getcustomersidpage($pageNum, $pageSize, $storeId = -1) {
         $result = array();
         $all = Mage::getModel('customer/customer')->getCollection();
+        
+        if ($storeId > -1) {
+            $all->addFieldToFilter("store_id", $storeId);
+        }
+        
         $all->addAttributeToSort('entity_id', 'asc')
                 ->setPage($pageNum, $pageSize);
+        
         foreach ($all as $customer) {
             $result[] = $customer["entity_id"];
         }
         return $result;
     }
 
-    public function countcustomers() {
+    public function countcustomers($storeId = -1) {
         $all = Mage::getModel('customer/customer')->getCollection();
+        
+        if ($storeId > -1) {
+            $all->addFieldToFilter("store_id", $storeId);
+        }
+        
         $all->getSelect()
                 ->reset(Zend_Db_Select::COLUMNS)
-                ->columns('COUNT(*) AS entitycount');
+                ->columns('COUNT(*) AS entitycount');                
+        
         $stmt = $all->getSelect()->query();
         $result = $stmt->fetchAll();
         $first = current($result);

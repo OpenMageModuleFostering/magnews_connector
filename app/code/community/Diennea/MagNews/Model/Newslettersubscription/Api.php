@@ -2,11 +2,16 @@
 
 class Diennea_MagNews_Model_Newslettersubscription_Api extends Mage_Api_Model_Resource_Abstract {
 
-    public function getnoncustomerspage($pageNum, $pageSize) {
+    public function getnoncustomerspage($pageNum, $pageSize, $storeId = -1) {
         $result = array();
         $subscriptions = Mage::getModel('newsletter/subscriber')
                 ->getCollection()
                 ->addFieldToFilter("customer_id", 0);
+        
+        if ($storeId > -1) {
+            $subscriptions->addFieldToFilter("store_id", $storeId);
+        }
+        
         $subscriptions->getSelect()->limit($pageSize, (($pageNum - 1) * $pageSize));
         $subscriptions->load(false, true);
         foreach ($subscriptions as $subscriber) {
@@ -15,11 +20,16 @@ class Diennea_MagNews_Model_Newslettersubscription_Api extends Mage_Api_Model_Re
         return $result;
     }
 
-    public function getallnoncustomers() {
+    public function getallnoncustomers($storeId = -1) {
         $result = array();
-        $subscriptions = Mage::getModel('newsletter/subscriber')
-                ->getCollection();
+        
+        $subscriptions = Mage::getModel('newsletter/subscriber')->getCollection();
         $subscriptions->addFieldToFilter("customer_id", 0);
+        
+        if ($storeId > -1) {
+            $subscriptions->addFieldToFilter("store_id", $storeId);
+        }
+        
         $subscriptions->load();
         foreach ($subscriptions as $subscriber) {
             $result[] = $subscriber->toArray();
@@ -27,9 +37,14 @@ class Diennea_MagNews_Model_Newslettersubscription_Api extends Mage_Api_Model_Re
         return $result;
     }
 
-    public function countnoncustomers() {
+    public function countnoncustomers($storeId = -1) {
         $all = Mage::getModel('newsletter/subscriber')->getCollection();
         $all->addFieldToFilter("customer_id", 0);
+        
+        if ($storeId > -1) {
+            $all->addFieldToFilter("store_id", $storeId);
+        }
+        
         $all->getSelect()
                 ->reset(Zend_Db_Select::COLUMNS)
                 ->columns('COUNT(*) AS entitycount');

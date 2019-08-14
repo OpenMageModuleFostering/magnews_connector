@@ -1,4 +1,4 @@
-
+<?xml version="1.0"?>
 <config>    
     <api>
         <resources>
@@ -152,12 +152,39 @@
                 <acl>magnews</acl>
                 <methods>
                     <getmaxproductid translate="title" module="magnews">
-                        <title>Retrieve current min and max database ids of catalog products</title>      
+                        <title>Retrieves current min and max database ids of catalog products</title>      
                         <method>getminandmaxproductid</method>
                         <acl>magnews/useplugin</acl>
-                    </getmaxproductid>                    
+                    </getmaxproductid>      
+                    <getproductsbystore translate="title" module="magnews">
+                        <title>Retrieves products associated to specific store view</title>
+                        <method>getproductsbystore</method>
+                        <acl>magnews/useplugin</acl>
+                    </getproductsbystore>        
+                    <getproductrelation translate="title" module="magnews">
+                        <title>Retrieves child products of supplied configurable product</title>
+                        <method>getproductrelation</method>
+                        <acl>magnews/useplugin</acl>
+                    </getproductrelation>
                 </methods>                
             </magnews_catalog>
+            <magnews_store translate="title" module="magnews">
+                <title>MagNews Store queries</title>
+                <model>Diennea_MagNews_Model_Store_Api</model>
+                <acl>magnews</acl>
+                <methods>
+                    <getcurrencyrates translate="title" module="magnews">
+                        <title>Retrieves Currency Rates</title>
+                        <method>getcurrencyrates</method>
+                        <acl>magnews/useplugin</acl>
+                    </getcurrencyrates>
+                    <getstoredefaultcurrency translate="title" module="magnews">
+                        <title>Retrieves Store Default Currency </title>
+                        <method>getstoredefaultcurrency</method>
+                        <acl>magnews/useplugin</acl>
+                    </getstoredefaultcurrency>
+                </methods>
+            </magnews_store>
         </resources>
         <acl>
             <resources>

@@ -1,29 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>MagNews_Connector</name>
-    <version>2.0.2</version>
+    <version>2.0.3</version>
     <stability>stable</stability>
     <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
     <extends/>
-    <summary>Relevant email marketing, thanks to automated  targeted lifecycle promotions, based on chart recovery, up selling, cross selling,  whishlists</summary>
-    <description>MagNews Connector for Magento was developed to integrate the information contained on your Ecommerce (customer lists, product descriptions, orders, click, shopping carts and whishlists) with the Email Marketing platform MagNews. &#xD;
-&#xD;
-Our connector allows you to create promos containing information relevant to the user in few clicks.</description>
-    <notes>MagNews Connector for Magento was developed to integrate the information contained on your Ecommerce (customer lists, product descriptions, orders, click, shopping carts and whishlists) with the Email Marketing platform MagNews. &#xD;
-&#xD;
-Our connector allows you to create promos containing information relevant to the user in few clicks.&#xD;
-&#xD;
-=============================&#xD;
-&#xD;
-Il connettore MagNews per Magento nasce dall'esigenza di integrare le informazioni contenute sul tuo ecommerce Magento (lista clienti, iscritti alla newsletter, descrizione prodotti, ordini, prodotti visualizzati/cliccati, carrelli abbandonati e lista desideri) con la tua piattaforma per l'Email Marketing MagNews.&#xD;
-&#xD;
-Il nostro connettore ti permette di creare promozioni contenenti informazioni rilevanti per l'utente in pochi click.&#xD;
-</notes>
+    <summary>MagNews integration</summary>
+    <description>Relevant emails by automated targeted lifecycle promotions (chart recovery,upselling,crossselling, whishlists)</description>
+    <notes>version 2.0.3 stable</notes>
     <authors><author><name>MagNews Development Team</name><user>magnews</user><email>info@magnews.it</email></author></authors>
-    <date>2014-09-22</date>
-    <time>14:47:17</time>
-    <contents><target name="magelocal"><dir name="Diennea"><dir name="MagNews"><dir name="Helper"><file name="Data.php" hash="e987ec7fdf08772f87c9a6b6d5cf896b"/></dir><dir name="Model"><dir name="Abandonedcart"><file name="Api.php" hash="70dc4d31662c7114ed8381aeeed2570a"/></dir><dir name="Catalog"><file name="Api.php" hash="ce310ce76c7a6037e45650fed8dd65a0"/></dir><dir name="Custom"><dir name="Reports"><dir name="Products"><dir name="Mostabandoned"><file name="Collection.php" hash="25ee2293c9d33763706b614abc506410"/></dir><dir name="Mostprofitable"><file name="Collection.php" hash="9ac2b1aa23aaa5332fb7ae02a3977fee"/></dir></dir></dir></dir><dir name="Customerlogin"><file name="Api.php" hash="b5ed4c3e391db440d873462949306e38"/></dir><dir name="Customerqueries"><file name="Api.php" hash="65320aeeae57fa6d7eac5bae81daf417"/></dir><dir name="Customersbatch"><file name="Api.php" hash="ae08720149dd9099eda8bf675d98be60"/></dir><dir name="Globalqueries"><file name="Api.php" hash="bde93356d2946f0c1e99de13bc68ebdf"/></dir><dir name="Newslettersubscription"><file name="Api.php" hash="bd31b3dcf7ec58b426b675757965821c"/></dir><dir name="Version"><file name="Api.php" hash="36fdffb22d3e5ce184779375358dcd4e"/></dir></dir><dir name="etc"><file name="api.xml" hash="e35f9cf57f573a9962f0cdb079ca7230"/><file name="config.xml" hash="7459764707770ec6b4268b291cc4151d"/><file name="system.xml" hash="35d8f0b103721dd4fce9e0d1237d46de"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Diennea_MagNews.xml" hash="32805294b3f2834fd8c1806b5a6b241f"/></dir></target></contents>
+    <date>2015-01-08</date>
+    <time>08:31:48</time>
+    <contents><target name="magecommunity"><dir name="Diennea"><dir name="MagNews"><dir name="Helper"><file name="Data.php" hash="e987ec7fdf08772f87c9a6b6d5cf896b"/></dir><dir name="Model"><dir name="Abandonedcart"><file name="Api.php" hash="70dc4d31662c7114ed8381aeeed2570a"/></dir><dir name="Catalog"><file name="Api.php" hash="f1df47b33fc40753f0a1b88a9feeb2ee"/></dir><dir name="Custom"><dir name="Reports"><dir name="Products"><dir name="Mostabandoned"><file name="Collection.php" hash="eadc4aab644727a34acf8a8a6f4a3ce9"/></dir><dir name="Mostprofitable"><file name="Collection.php" hash="a7169ff3e60939f244a3d26ceedccb94"/></dir></dir></dir></dir><dir name="Customerlogin"><file name="Api.php" hash="b5ed4c3e391db440d873462949306e38"/></dir><dir name="Customerqueries"><file name="Api.php" hash="65320aeeae57fa6d7eac5bae81daf417"/></dir><dir name="Customersbatch"><file name="Api.php" hash="6c79fa92190fb80e1eb677c69c35f437"/></dir><dir name="Globalqueries"><file name="Api.php" hash="60f6723247f7d952dff4ebaccaf64b46"/></dir><dir name="Newslettersubscription"><file name="Api.php" hash="ce3294946b010c3581cfa4b723482be7"/></dir><dir name="Store"><file name="Api.php" hash="1d5cafbbacf864d0731dd98c00c5f8e7"/></dir><dir name="Version"><file name="Api.php" hash="a1236d44170d4e1118d5a409e4ca0a83"/></dir></dir><dir name="etc"><file name="api.xml" hash="baf621b6425b6eb3ed0877b23bd4e90c"/><file name="config.xml" hash="49d90866ee479e3fef57382dc3a977d5"/><file name="system.xml" hash="35d8f0b103721dd4fce9e0d1237d46de"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Diennea_MagNews.xml" hash="412fb5437a0983360ecf098850b43d18"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>
