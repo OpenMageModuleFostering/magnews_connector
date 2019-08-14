@@ -23,7 +23,7 @@ class Diennea_MagNews_Model_Store_Api extends Mage_Api_Model_Resource_Abstract {
     /**
      * Restituisce la valuta di default per lo store richiesto o quella di 
      * default del website se niente è stato trovato.
-     *     
+     * 
      * @param type $storeid
      * @return type
      */

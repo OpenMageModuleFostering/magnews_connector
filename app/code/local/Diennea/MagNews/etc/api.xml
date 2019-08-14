@@ -185,6 +185,28 @@
                     </getstoredefaultcurrency>
                 </methods>
             </magnews_store>
+            <magnews_customquery translate="title" module="magnews">
+                <title>MagNews custom query</title>
+                <model>Diennea_MagNews_Model_CustomQuery_Api</model>
+                <acl>magnews</acl>
+                <methods>
+                    <getbaseconfig translate="title" module="magnews">
+                        <title>Get Base Config</title>
+                        <method>getbaseconfig</method>
+                        <acl>magnews/useplugin</acl>
+                    </getbaseconfig>
+                    <select translate="title" module="magnews">
+                        <title>Select</title>
+                        <method>select</method>
+                        <acl>magnews/useplugin</acl>
+                    </select>
+                    <write translate="title" module="magnews">
+                        <title>Insert/Update</title>
+                        <method>write</method>
+                        <acl>magnews/useplugin</acl>
+                    </write>
+                </methods>
+            </magnews_customquery>
         </resources>
         <acl>
             <resources>
