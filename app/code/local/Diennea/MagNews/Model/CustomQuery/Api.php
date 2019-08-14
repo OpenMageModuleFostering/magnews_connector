@@ -12,11 +12,19 @@ class Diennea_MagNews_Model_CustomQuery_Api extends Mage_Api_Model_Resource_Abst
     }
 
     public function getbaseconfig() {
+        $edition = null;
+        if (function_exists("method_exists") && method_exists("Mage", "getEdition")) {
+            $edition = Mage::getEdition();
+        }
+        $version = Mage::getVersion();
+        
         $tablePrefix = Mage::getConfig()->getTablePrefix();
         $defaultCartUrl = Mage::helper('checkout/cart')->getCartUrl();
 
         return array(
             'ok' => true,
+            'edition' => $edition,
+            'version' => $version,
             'defaultCartUrl' => $defaultCartUrl,
             'tablePrefix' => "{$tablePrefix}"
         );
